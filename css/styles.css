@@ -1,0 +1,32 @@
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+}
+
+.link {
+    font-size: 2rem;
+    color: #07004d;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #ca054d;
+    transition: color 90ms linear;
+}
+
+.link::before {
+    background-color: #07004d;
+}
+
+.intro {
+    font-size: 8.7rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+p {
+    font-family: "EB Garamond", serif;
+}
