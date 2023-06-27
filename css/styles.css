@@ -22,9 +22,25 @@ h3 {
 .typed {
     font-size: 8.7rem;
     position: relative;
-    display: flex;
-    width: 100%;
     justify-content: center;
+    overflow: hidden;
+    border-right: .15em solid #ca054d;
+    margin: 0 auto;
+    width: 0;
+    white-space: nowrap;
+    animation:
+        typing 2.5s steps(18, end) 1s 1 normal both,
+        blink-caret 1s step-end infinite normal;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ca054d; }
 }
 
 p {
