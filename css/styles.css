@@ -19,12 +19,31 @@ h3 {
     background-color: #07004d;
 }
 
+.intro {
+    display: inline-block;
+    width: auto;
+}
+
 .typed {
     font-size: 8.7rem;
-    position: relative;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    overflow: hidden;
+    border-right: .15em solid;
+    margin: 0 auto;
+    white-space: nowrap;
+    animation:
+        typing 1.7s steps(19, end) normal,
+        blinking 1s step-end infinite normal;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+@keyframes blinking {
+    0% { border-right-color: transparent } 
+    50% { border-right-color: #ca054d } 
+    100% { border-right-color: transparent }
 }
 
 p {
