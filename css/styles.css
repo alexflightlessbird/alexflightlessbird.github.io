@@ -38,7 +38,29 @@ h3 {
     100% { width: 100% }
 }
 
+@-moz-keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+@-webkit-keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
 @keyframes blinking {
+    0% { border-right-color: transparent } 
+    50% { border-right-color: #ca054d } 
+    100% { border-right-color: transparent }
+}
+
+@-moz-keyframes blinking {
+    0% { border-right-color: transparent } 
+    50% { border-right-color: #ca054d } 
+    100% { border-right-color: transparent }
+}
+
+@-webkit-keyframes blinking {
     0% { border-right-color: transparent } 
     50% { border-right-color: #ca054d } 
     100% { border-right-color: transparent }
