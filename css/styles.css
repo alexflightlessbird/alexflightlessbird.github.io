@@ -19,28 +19,31 @@ h3 {
     background-color: #07004d;
 }
 
+.intro {
+    display: inline-block;
+    width: auto;
+}
+
 .typed {
     font-size: 8.7rem;
-    position: relative;
-    justify-content: center;
     overflow: hidden;
-    border-right: .15em solid #ca054d;
+    border-right: .15em solid;
     margin: 0 auto;
-    width: 0;
     white-space: nowrap;
     animation:
-        typing 2.5s steps(18, end) 1s 1 normal both,
-        blink-caret 1s step-end infinite normal;
+        typing 1.7s steps(19, end) normal,
+        blinking 1s step-end infinite normal;
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 70% }
+    0% { width: 0 }
+    100% { width: 100% }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #ca054d; }
+@keyframes blinking {
+    0% { border-right-color: transparent } 
+    50% { border-right-color: #ca054d } 
+    100% { border-right-color: transparent }
 }
 
 p {
