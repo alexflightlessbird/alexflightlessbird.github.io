@@ -1,13 +1,39 @@
+* {
+    color: #07004d;
+}
+
 h1,
 h2,
 h3 {
     font-family: "Oswald", sans-serif;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #c8c6d7;
+    margin-top: 0px;
+    right: -1px;
+    top: -1px;
+    padding-bottom: 5px;
+}
+
+.heading-container {
+    padding-left: 8px;
+}
+main {
+    position: relative;
+    top: 80px;
+}
+
 .link {
     font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     color: #07004d;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .link:hover {
@@ -19,7 +45,33 @@ h3 {
     background-color: #07004d;
 }
 
-.intro {
+nav {
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    color: #07004d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: #07004d;
+}
+
+nav a:hover {
+    color: #ca054d;
+    transition: color 90ms linear;
+}
+
+nav a::before {
+    background-color: #07004d;
+}
+
+.animation {
     display: inline-block;
     width: auto;
 }
@@ -31,6 +83,77 @@ h3 {
     margin: 0 auto;
     white-space: nowrap;
     animation: typing 1.7s steps(19, end) normal, blinking 1s step-end infinite normal;
+}
+
+p {
+    font-family: "EB Garamond", serif;
+    font-size: 1.2rem;
+}
+
+.lang-images {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.lang-images img {
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
+}
+
+table {
+    min-width: 1000px;
+    margin-left: 0px;
+}
+
+.education-table {
+    text-align: center;
+    width: 100%;
+    overflow: scroll;
+}
+
+.education-table td {
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 910px) {
+    nav {
+        font-size: 1.25rem;
+        max-width: 90%;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .typed {
+        font-size: 6.7rem;
+    }
+    nav {
+        font-size: 1.10rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .typed {
+        font-size: 5.7rem;
+    }
+    nav {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .typed {
+        font-size: 3.7rem;
+    }
+    nav {
+        font-size: 0.95rem;
+    }
 }
 
 @keyframes typing {
@@ -64,8 +187,4 @@ h3 {
     0% { border-right-color: transparent } 
     50% { border-right-color: #ca054d } 
     100% { border-right-color: transparent }
-}
-
-p {
-    font-family: "EB Garamond", serif;
 }
